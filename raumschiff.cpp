@@ -2,13 +2,15 @@
 
 Raumschiff::Raumschiff()
 {
+    rk = new Rettungskapsel;
     cout << "Raumschiff erstellt" << endl;
 }
 
-Raumschiff::Raumschiff(string n, int e)
+Raumschiff::Raumschiff(string n, int e):Raumschiff()
 {
     name = n;
     energie = e;
+    cout << "Überladener Konstruktor" << endl;
 }
 
 Raumschiff::~Raumschiff()
@@ -34,4 +36,16 @@ string Raumschiff::getName()
 int Raumschiff::getEnergie()
 {
     return energie;
+}
+
+void Raumschiff::printData()
+{
+    cout << name << endl;
+    cout << energie << endl;
+    cout << rk->getSerienNr() << endl;
+}
+
+Rettungskapsel *Raumschiff::getRettung()
+{
+    return rk;
 }

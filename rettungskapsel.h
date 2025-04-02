@@ -5,7 +5,7 @@ using namespace std;
 class Rettungskapsel
 {
 private:
-    int serienNr;
+    int serienNr = 888;
     int freiePlaetze;
 public:
     Rettungskapsel();

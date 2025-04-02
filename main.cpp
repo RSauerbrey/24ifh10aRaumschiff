@@ -6,9 +6,13 @@ using namespace std;
 int main()
 {
     Raumschiff *r = new Raumschiff("Enterprise", 12345);
-    cout << r->getName() << endl;
-    cout << r->getEnergie() << endl;
 
+    r->printData();
 
+    Rettungskapsel* save;
+    save = r->getRettung();
+    delete r;
+
+    cout << save->getSerienNr() << endl;
     return 0;
 }
